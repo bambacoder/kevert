@@ -23,6 +23,8 @@ int main()
         i++;
         j++;
     }
+    i= 0;
+    j= 0;
     /*
     for (int k=1; k<strlen(szo); k++)
     {
@@ -48,12 +50,16 @@ int main()
     {
         szamok[i]=i;
     }
-    for (int p=0; p<ujhossz; p++)
+    for (int p=1; p<ujhossz; p++)
     {
-        hanyadik= rand()%((ujhossz)-p);
+        hanyadik= rand()%((ujhossz));
+        printf("%d, ", hanyadik);
         ujsorrend[p]=szamok[hanyadik];
         for(int q=hanyadik; q<ujhossz; q++)
+        {
             szamok[q]=szamok[q+1];
+        }
+        printf("%d ",ujsorrend[p]);
     }
 
     /*
@@ -64,16 +70,13 @@ int main()
     */
     kevert[0]=szo[0];
     kevert[ujhossz]= szo[ujhossz];
-    for (int r=1; r<ujhossz; r++)
-    {
-
-    }
-    /*
+    int emm;
     for (int m= 1; m<ujhossz; m++)
     {
-        kevert[m] = szo [ujsorrend[m]];
+        emm= ujsorrend[m];
+        kevert[m] = szo [emm];
     }
     printf("%s",kevert);
-*/
+
     return 0;
 }
