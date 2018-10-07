@@ -17,7 +17,7 @@ int main()
     char kevert[50]={0};
     int randszamsor[50]={0};
 
-    while (szoveg[j]!= '\0')
+    while (szoveg[j]!= '\0')//felveszem az elsõ szót
     {
         szo[i]= szoveg[j];
         i++;
@@ -46,13 +46,13 @@ int main()
     int ujsorrend[50]={0};
     int hanyadik=0;
     int ujhossz=strlen(szo);
-    for(int o=1; o<ujhossz; o++)
+    for(int o=1; o<ujhossz; o++)//számok sorrendben
     {
         szamok[i]=i;
     }
-    for (int p=1; p<ujhossz; p++)
+    for (int p=1; p<ujhossz; p++) //uj sorrendet hozok létre, s orrendben lévõket egyenként húzom át egy másik tömbbe más sorrnedben
     {
-        hanyadik= rand()%((ujhossz));
+        hanyadik= rand()%(ujhossz);
         printf("%d, ", hanyadik);
         ujsorrend[p]=szamok[hanyadik];
         for(int q=hanyadik; q<ujhossz; q++)
@@ -68,9 +68,9 @@ int main()
         printf("%d, ", sorrend[l]);
     }
     */
-    kevert[0]=szo[0];
+    kevert[0]=szo[0];/szélsõ karakterek maradnak
     kevert[ujhossz]= szo[ujhossz];
-    int emm;
+    int emm;//gecire elegem vt
     for (int m= 1; m<ujhossz; m++)
     {
         emm= ujsorrend[m];
